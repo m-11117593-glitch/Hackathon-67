@@ -1,0 +1,65 @@
+property_id,title,price,price_buy,price_rent,location,state,bedrooms,bathrooms,image,url,source
+67f22345-e820-4d2b-9bf3-ccebe81b7389,Harbour View,280000.0,280000.0,,Perak,perak,3.0,2.0,https://img.rnudah.com/grids/29/2981381291693524651.jpg,https://www.mudah.my/property/properties-in-harbour-view-perak,condominium
+4e4cde54-c079-419e-b0ed-3a568396d421,Kampar Lake Campus,9758.0,9758.0,700.0,Perak,perak,3.0,2.0,https://img.rnudah.com/grids/29/2939470452224057941.jpg,https://www.mudah.my/property/properties-in-kampar-lake-campus-perak,condominium
+c3594aa6-b8b7-4584-ab80-481ec5f840fa,Rayaria,5804.0,5804.0,,Perak,perak,3.0,2.0,https://img.rnudah.com/grids/29/2982613285960068161.jpg,https://www.mudah.my/property/properties-in-rayaria-perak,condominium
+6ba704eb-46b5-477e-87f1-405185ffc58b,Treetops Residence,969.0,969.0,,Perak,perak,3.0,2.0,https://img.rnudah.com/grids/27/2752333782635236265.jpg,https://www.mudah.my/property/properties-in-treetops-residence-perak,condominium
+32fc609c-c7ab-4211-800b-aa81edd80377,Iskandar Furnished Suites (IFS),950.0,950.0,600.0,Perak,perak,3.0,1.0,https://img.rnudah.com/grids/29/2981879586166778945.jpg,https://www.mudah.my/property/properties-in-iskandar-furnished-suites-ifs-perak,condominium
+2932d2f1-4f08-4cb4-a48b-a17eaa855c56,D'Aman Residence,950.0,950.0,750.0,Perak,perak,3.0,2.0,https://img.rnudah.com/grids/29/2978002692144989616.jpg,https://www.mudah.my/property/properties-in-daman-residence-perak,condominium
+48bc8880-c022-4ac1-bc18-20f7c8f49019,Kinta Riverfront,900.0,900.0,900.0,Perak,perak,3.0,2.0,https://img.rnudah.com/grids/29/2940018456702146655.jpg,https://www.mudah.my/property/properties-in-kinta-riverfront-perak,condominium
+a8a20226-cf07-4762-9ab0-8cc3652c8b75,Fairway Heights,900.0,900.0,900.0,Perak,perak,3.0,2.0,https://img.rnudah.com/grids/29/2907957130140624071.jpg,https://www.mudah.my/property/properties-in-fairway-heights-perak,condominium
+f05abb63-7335-47b7-83c3-1f316d1ffbaa,Casa Residences,900.0,900.0,700.0,Perak,perak,3.0,2.0,https://img.rnudah.com/grids/29/2937383424694958271.jpg,https://www.mudah.my/property/properties-in-casa-residences-perak,condominium
+a561cadc-aa79-4c3e-8dea-d9205731e987,Pangsapuri Samudera 1,850.0,850.0,660.0,Perak,perak,3.0,2.0,https://img.rnudah.com/grids/29/2940355233995054030.jpg,https://www.mudah.my/property/properties-in-pangsapuri-samudera-1-perak,condominium
+759ac288-d4f8-4ffa-9d29-1ea377443f8c,Unknown,850.0,850.0,560.0,Perak,perak,,,https://cdn.rnudah.com/image_property/plain/e948e7c1d1784d55a49e47d1b0ec6e28-2852145763881663140.jpg,https://www.mudah.my/property/apartment,condominium
+1a0d9676-1b13-41fb-af77-b09faf230733,Sky Garden Residence,800.0,800.0,800.0,Perak,perak,3.0,2.0,https://img.rnudah.com/grids/29/2967996824610833346.jpg,https://www.mudah.my/property/properties-in-sky-garden-residence-perak,condominium
+47a2043c-cf5e-48ad-985d-f6fb9f474395,Cornerstone Taiping Condominium,799.0,799.0,,Perak,perak,3.0,3.0,https://img.rnudah.com/grids/29/2976701868169043237.jpg,https://www.mudah.my/property/properties-in-cornerstone-taiping-condominium-perak,condominium
+294fba47-73f2-4e23-9fe3-094c33846fab,Panorama Lapangan Perdana,650.0,650.0,600.0,Perak,perak,3.0,2.0,https://img.rnudah.com/grids/29/2980171324534371704.jpg,https://www.mudah.my/property/properties-in-panorama-lapangan-perdana-perak,condominium
+0d24077a-6e05-4675-a811-0d7f010b8050,Champs Elysees,650.0,650.0,650.0,Perak,perak,1.0,1.0,https://img.rnudah.com/grids/29/2959592281822993645.jpg,https://www.mudah.my/property/properties-in-champs-elysees-perak,condominium
+df4eb6ae-0863-4fe2-a6cc-ffc32b200c91,Rumah Pangsa Bercham,600.0,600.0,580.0,Perak,perak,2.0,1.0,https://img.rnudah.com/grids/29/2951336402489208557.jpg,https://www.mudah.my/property/properties-in-rumah-pangsa-bercham-perak,condominium
+f4703bc4-e8a6-444d-a7a2-d7145df0ab40,Uni Suites,600.0,600.0,,Perak,perak,2.0,1.0,https://img.rnudah.com/grids/29/2978638316279537457.jpg,https://www.mudah.my/property/properties-in-uni-suites-perak,condominium
+086229c8-85f9-4f4b-9aa9-2792a1dfcb2f,Polo Residence,580.0,580.0,580.0,Perak,perak,2.0,2.0,https://img.rnudah.com/grids/29/2978201751168327473.jpg,https://www.mudah.my/property/properties-in-polo-residence-perak,condominium
+e0a4ba58-4334-4e34-bd76-d7a8d6f05ee8,Rumah Pangsa Menglembu,550.0,550.0,550.0,Perak,perak,3.0,1.0,https://img.rnudah.com/grids/31/316026097736532.jpg,https://www.mudah.my/property/properties-in-rumah-pangsa-menglembu-perak,condominium
+d7503808-6842-4f8a-9551-1391e30a4b40,The Majestic,525.0,525.0,,Perak,perak,3.0,2.0,https://img.rnudah.com/grids/29/2977431937944813748.jpg,https://www.mudah.my/property/properties-in-the-majestic-perak,condominium
+1a97db7c-97f9-42b4-a849-8c74e8e2e1e1,D Festivo Residences,520.0,520.0,508.0,Perak,perak,8.0,8.0,https://img.rnudah.com/grids/29/2981037217702889131.jpg,https://www.mudah.my/property/properties-in-d-festivo-residences-perak,condominium
+821f16d0-c8b0-43ba-87b6-9b1b40fcfc42,404,,,,Perak,perak,,,https://www.facebook.com/tr?id=632307416906311&ev=viewcategory&&cd[content_category]=0%20%7c%20all_categories&noscript=1,https://www.mudah.my/property/apartment%3Futm_source%3Ddfp%26utm_medium%3Dbanner%26utm_campaign%3Dall_cat_oct2023%26utm_term%3Dapartment-directory-building-page%26utm_content%3Dhalfpage</a><a,condominium
+c0a3cce5-bcfc-444a-8d97-1d20234ad420,Taman Kampar Perdana,,,,Perak,perak,3.0,1.0,https://img.rnudah.com/grids/29/2961353127566888799.jpg,https://www.mudah.my/property/properties-in-taman-kampar-perdana-perak,condominium
+2b4bd104-9dee-4ff7-88c8-750cf26e2f84,Sky Home,,,,Perak,perak,3.0,2.0,https://img.rnudah.com/grids/29/2981906897758799531.jpg,https://www.mudah.my/property/properties-in-sky-home-perak,condominium
+d41d63cc-f5cc-4eb5-b10e-388a6ab48895,The Cove Hillside Residence,,,,Perak,perak,3.0,2.0,https://img.rnudah.com/grids/29/2966292016016590584.jpg,https://www.mudah.my/property/properties-in-the-cove-hillside-residence-perak,condominium
+f7382f9b-cff3-419d-a47d-c899e9745b50,404,,,,Perak,perak,,,https://www.facebook.com/tr?id=632307416906311&ev=viewcategory&&cd[content_category]=0%20%7c%20all_categories&noscript=1,https://www.mudah.my/property/apartment%3Futm_source%3Ddfp%26utm_medium%3Dbanner%26utm_campaign%3Dall_cat_oct2023%26utm_term%3Dapartment-directory-building-page%26utm_content%3Dhalfpage,condominium
+8a9698a9-f825-427a-8959-a51b66fec42b,Dwj residence,,,,Perak,perak,3.0,2.0,https://img.rnudah.com/grids/29/2958332964367151520.jpg,https://www.mudah.my/property/properties-in-dwj-residence-perak,condominium
+0395219f-f23c-4b8a-bd5e-4a769015acd9,404,,,,Perak,perak,,,https://www.facebook.com/tr?id=632307416906311&ev=viewcategory&&cd[content_category]=0%20%7c%20all_categories&noscript=1,https://www.mudah.my/property/apartment</a><a,condominium
+8a1a9dfe-1aba-4fae-9f0a-1f4516714797,The Club Condominium,,,,Perak,perak,4.0,4.0,https://img.rnudah.com/grids/85/855715111356087.jpg,https://www.mudah.my/property/properties-in-the-club-condominium-perak,condominium
+ee05ecf3-6d63-4722-9ef7-7c58c1428f42,Oasis Condominium @ SIMEE,,,,Perak,perak,3.0,2.0,https://img.rnudah.com/grids/29/2980014872549084926.jpg,https://www.mudah.my/property/properties-in-oasis-condominium-simee-perak,condominium
+3fa5f3bb-8a95-4eb0-a5d2-d4bb0de6dd2c,404,,,,Perak,perak,,,https://www.facebook.com/tr?id=632307416906311&ev=viewcategory&&cd[content_category]=0%20%7c%20all_categories&noscript=1,https://www.mudah.my/property/apartment%3Futm_source%3Ddfp%26utm_medium%3Dbanner%26utm_campaign%3Dall_cat_oct2023%26utm_term%3Dapartment-directory-building-page%26utm_content%3Dhalfpage</a>,condominium
+4363ed21-ee07-4776-97b6-e6ff602bd16c,Tower Regency,,,,Perak,perak,4.0,3.0,https://img.rnudah.com/grids/29/2927032946022982723.jpg,https://www.mudah.my/property/properties-in-tower-regency-perak,condominium
+8fd0d919-9537-43c4-9365-127604d5126a,Allamanda (Ipoh),,,,Perak,perak,3.0,3.0,https://img.rnudah.com/grids/27/2753359208907199168.jpg,https://www.mudah.my/property/properties-in-allamanda-ipoh-perak,condominium
+8e1bffe9-134b-40c6-9a56-8b5267d05cb9,Kampus West City,,,,Perak,perak,1.0,1.0,https://img.rnudah.com/grids/29/2966833972936821748.jpg,https://www.mudah.my/property/properties-in-kampus-west-city-perak,condominium
+bc4d57fc-7689-4548-bdd5-6fc34ff7a2e9,404,,,,Perak,perak,,,https://www.facebook.com/tr?id=632307416906311&ev=viewcategory&&cd[content_category]=0%20%7c%20all_categories&noscript=1,https://www.mudah.my/property/apartment</a>,2story
+4645e293-f7ce-435e-a644-77c4d5a0a9d0,404,,,,Perak,perak,,,,https://www.mudah.my/property/properties-in-dwj-residence-perak</a>,condominium
+cc0b4062-7c0b-4654-b93b-53ce1e905afd,404,,,,Perak,perak,,,,https://www.mudah.my/property/properties-in-cornerstone-taiping-condominium-perak</a><a,condominium
+e1739b07-d97e-424e-9f24-8385c818e1c7,404,,,,Perak,perak,,,,https://www.mudah.my/property/properties-in-polo-residence-perak</a><a,condominium
+b8b0c39d-2765-4746-9420-053bc0e9a901,404,,,,Perak,perak,,,,https://www.mudah.my/property/properties-in-taman-kampar-perdana-perak</a><a,condominium
+b404c8ca-afec-4621-bfbf-d06b0cc59285,404,,,,Perak,perak,,,,https://www.mudah.my/property/properties-in-the-cove-hillside-residence-perak</a><a,condominium
+abe346db-27e8-4824-bcef-8268e122d742,404,,,,Perak,perak,,,,https://www.mudah.my/property/properties-in-sky-home-perak</a><a,condominium
+1ca7b78c-7063-4369-afc5-eb5a94c2e0ec,404,,,,Perak,perak,,,,https://www.mudah.my/property/properties-in-rumah-pangsa-menglembu-perak</a><a,condominium
+c0b0995e-7d07-4067-98fc-48035133cb1d,404,,,,Perak,perak,,,,https://www.mudah.my/property/properties-in-fairway-heights-perak</a><a,condominium
+dbf5d477-d362-4a79-a34c-c44f76f052a1,404,,,,Perak,perak,,,,https://www.mudah.my/property/properties-in-d-festivo-residences-perak</a><a,condominium
+eda4b056-4f25-40a5-bf76-8abe5fedc072,404,,,,Perak,perak,,,,https://www.mudah.my/property/properties-in-the-club-condominium-perak</a><a,condominium
+d6d0f1c0-4a67-4533-a6d1-a2d4da4c6241,404,,,,Perak,perak,,,,https://www.mudah.my/property/properties-in-daman-residence-perak</a>,condominium
+256dd938-b4b1-4a85-b174-f345e2a01567,404,,,,Perak,perak,,,,https://www.mudah.my/property/properties-in-kinta-riverfront-perak</a><a,condominium
+774f921c-fbbe-4587-8b5f-6fbc1fc716c6,404,,,,Perak,perak,,,,https://www.mudah.my/property/properties-in-harbour-view-perak</a><a,condominium
+1c8fe37b-1bf6-483f-97d6-563d789534ee,404,,,,Perak,perak,,,,https://www.mudah.my/property/properties-in-uni-suites-perak</a><a,condominium
+d0f6c0f8-8f30-4ef4-a3f3-4a68090e998d,404,,,,Perak,perak,,,,https://www.mudah.my/property/properties-in-champs-elysees-perak</a><a,condominium
+1f8749d8-d623-4ceb-b081-c94c94a07fdc,404,,,,Perak,perak,,,,https://www.mudah.my/property/properties-in-pangsapuri-samudera-1-perak</a><a,condominium
+5c7e4682-e6c8-48ad-a18a-55bc5ee1b6bb,404,,,,Perak,perak,,,,https://www.mudah.my/property/properties-in-oasis-condominium-simee-perak</a><a,condominium
+b4c1c1ba-49e2-4ddd-ba2e-16aea4076db4,404,,,,Perak,perak,,,,https://www.mudah.my/property/properties-in-rayaria-perak</a><a,condominium
+b8390a22-b06c-4a6b-ae01-d1e578cd365e,404,,,,Perak,perak,,,,https://www.mudah.my/property/properties-in-panorama-lapangan-perdana-perak</a><a,condominium
+2539e95a-07b7-4ee6-a001-471f07d2062a,404,,,,Perak,perak,,,,https://www.mudah.my/property/properties-in-the-majestic-perak</a>,condominium
+226d6f72-7e72-4a1b-9b51-04d483de3c45,404,,,,Perak,perak,,,,https://www.mudah.my/property/properties-in-iskandar-furnished-suites-ifs-perak</a><a,condominium
+aedb179c-ffea-44d2-87bb-7c61cc4eb8a5,404,,,,Perak,perak,,,,https://www.mudah.my/property/properties-in-kampar-lake-campus-perak</a><a,condominium
+e53e2b74-c750-40b6-a356-1fb241eea7fc,404,,,,Perak,perak,,,,https://www.mudah.my/property/properties-in-rumah-pangsa-bercham-perak</a><a,condominium
+0f4d8baf-aaf7-4649-8d5b-627f4864a5a8,404,,,,Perak,perak,,,,https://www.mudah.my/property/properties-in-tower-regency-perak</a><a,condominium
+28878c12-eaf2-46f7-b3a0-53363f4b85d2,404,,,,Perak,perak,,,,https://www.mudah.my/property/properties-in-allamanda-ipoh-perak</a><a,condominium
+ab0dde10-bc1d-4e00-8041-b758877e2458,404,,,,Perak,perak,,,,https://www.mudah.my/property/properties-in-treetops-residence-perak</a><a,condominium
+33ba58ec-eacb-4f8d-9341-dde30cddc1cd,404,,,,Perak,perak,,,,https://www.mudah.my/property/properties-in-sky-garden-residence-perak</a><a,condominium
+ffed410b-ad09-46a9-8101-0decbfaa8b55,404,,,,Perak,perak,,,,https://www.mudah.my/property/properties-in-kampus-west-city-perak</a><a,condominium
+b4fd3638-5473-4d19-9206-c543a98cf0aa,404,,,,Perak,perak,,,,https://www.mudah.my/property/properties-in-casa-residences-perak</a><a,condominium
