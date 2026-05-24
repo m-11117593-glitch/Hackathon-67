@@ -22,3 +22,17 @@ A Playwright-based async web scraper for extracting Malaysian property listings 
 
 ## 📁 Project Structure
 m-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+scraper/
+├── browser/
+│ └── playwright_client.py
+├── parsers/
+│ ├── listing_parser.py
+│ └── detail_parser.py
+├── storage/
+│ └── csv_writer.py
+├── utils/
+├── sources/
+│ └── mudah_config.py
+engine.py
+seed_all.py
+cache/
