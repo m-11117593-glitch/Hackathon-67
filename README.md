@@ -1,70 +1,208 @@
-# Getting Started with Create React App
+# 🏠 Hackathon Claude Scraper (Mudah Property Engine)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A Playwright-based async web scraper for extracting Malaysian property listings from Mudah.my with caching, deduplication, and structured parsing.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+- Async Playwright browser scraping
+- Listing + detail page extraction
+- Network interception for hidden property URLs
+- Automatic scrolling for lazy-loaded content
+- Price parsing (buy/rent separation)
+- Image extraction with fallback filtering
+- Bedroom / bathroom extraction
+- Cache system (latest + history snapshots)
+- TTL-based cache cleanup (3 days)
+- Deduplication ("ghost" removal system)
+- Batch scraping across multiple Malaysian states
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📁 Project Structure
+m-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+scraper/
+├── browser/
+│ └── playwright_client.py
+├── parsers/
+│ ├── listing_parser.py
+│ └── detail_parser.py
+├── storage/
+│ └── csv_writer.py
+├── utils/
+├── sources/
+│ └── mudah_config.py
+engine.py
+seed_all.py
+cache/
+## ⚙️ Installation
 
-### `npm test`
+### 1. Install dependencies
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+pip install -r requirements.txt
+2. Install Playwright browsers
+python -m playwright install
+▶️ How to Run
+🔹 Run single state scrape (recommended for testing)
+python -c "import asyncio; from scraper.engine import scrape_state; asyncio.run(scrape_state('johor'))"
+🔹 Run full batch scrape (all states)
+python seed_all.py
+📦 Output Files
 
-### `npm run build`
+After running, results are stored in:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+cache/
+ ├── latest.json        # latest run snapshot
+ ├── index.json         # pointer to latest file
+ ├── history/
+ │    ├── <timestamp>.json
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Each snapshot contains:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+{
+  "created_at": 1234567890,
+  "state": "johor",
+  "count": 500,
+  "data": [...]
+}
+🧠 Core Pipeline Flow
+State → Category URLs → Listing URLs → Detail Pages → Parsed JSON → Cache
+⚠️ Important Notes
+1. Playwright is required
 
-### `npm run eject`
+Run:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+python -m playwright install
+2. Expect occasional missing data ("ghost listings")
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Some listings may have:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+missing price
+missing image
+incomplete HTML rendering
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+This is normal due to dynamic website behavior.
 
-## Learn More
+3. Timeouts are expected
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Mudah pages:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+sometimes delay rendering
+sometimes partially block scraping
 
-### Code Splitting
+Failures are handled safely and skipped.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4. Performance tuning
 
-### Analyzing the Bundle Size
+You can adjust:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+concurrency:
+MAX_CONCURRENCY
+detail scraping load:
+asyncio.Semaphore(6)
+🧹 Cache System
+TTL cleanup: 3 days
+Auto deletes old JSON snapshots
+Keeps latest snapshot always available
+🧪 Debug Tips
 
-### Making a Progressive Web App
+If scraping seems stuck:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+reduce concurrency
+check Playwright install
+ensure internet stability
+run single state first (johor)
+🛠 Recommended Next Improvements (optional)
+JSON-LD extraction (for better price/image accuracy)
+Retry system for failed listings
+Proxy rotation (if scaling)
+Database storage (PostgreSQL / MongoDB)
+👨‍💻 Author Notes
 
-### Advanced Configuration
+This system is designed for:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+hackathon-scale scraping
+research / prototyping
+property data aggregation pipelines
 
-### Deployment
+Not optimized for production anti-bot environments.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# 📌 CHECKLIST FOR YOUR FRIEND (IMPORTANT)
+
+Give this to him exactly:
+
+---
+
+## ✅ SETUP CHECKLIST
+
+### Environment
+- [ ] Python 3.10+ installed
+- [ ] Repo cloned correctly
+- [ ] `pip install -r requirements.txt` run
+- [ ] `python -m playwright install` run
+
+---
+
+## ⚙️ CODE CHECKS
+
+### Playwright
+- [ ] Ensure only ONE `finally: await page.close()` exists in `get_html`
+- [ ] Confirm no duplicate cleanup blocks
+- [ ] Ensure `domcontentloaded` is used (not `networkidle`)
+
+---
+
+### Engine
+- [ ] `scrape_state()` runs without import errors
+- [ ] Cache folder auto-creates:
+
+cache/history/
+
+
+---
+
+### Parsers
+- [ ] Listing parser returns valid URLs only
+- [ ] Detail parser returns:
+- title
+- price_buy / price_rent
+- image
+- bedrooms/bathrooms
+
+---
+
+## 🧠 BEHAVIOR EXPECTATIONS
+
+He should understand:
+
+- ❗ Some listings will fail (normal)
+- ❗ Some fields will be null (normal)
+- ❗ Scraper is best-effort, not perfect
+
+---
+
+## 🚀 HOW TO TEST
+
+### Step 1 (small test)
+```bash
+python -c "import asyncio; from scraper.engine import scrape_state; asyncio.run(scrape_state('johor'))"
+Step 2 (full run)
+python seed_all.py
+🧹 DEBUG IF STUCK
+
+If it hangs:
+
+kill process
+reduce concurrency to 4
+restart Playwright install
+rerun single state first
+💀 KNOWN LIMITATIONS
+No proxy rotation
+Some anti-bot pages fail silently
+Some images/prices require JS rendering delay
+Some listings are partially blocked
