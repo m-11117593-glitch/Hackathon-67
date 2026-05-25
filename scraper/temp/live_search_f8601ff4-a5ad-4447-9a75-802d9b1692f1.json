@@ -1,0 +1,15 @@
+{
+  "created_at": 1779672626.3226933,
+  "data": {
+    "success": true,
+    "total_results": 0,
+    "filters_used": {
+      "location": "Kelantan",
+      "budget": 3500,
+      "bedrooms": 2,
+      "car_park": false,
+      "listing_type": "rent"
+    },
+    "results": []
+  }
+}

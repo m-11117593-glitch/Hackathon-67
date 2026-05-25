@@ -1,0 +1,32 @@
+{
+  "created_at": 1779672308.3445022,
+  "data": {
+    "success": true,
+    "total_results": 1,
+    "filters_used": {
+      "location": "johor",
+      "budget": 1500,
+      "bedrooms": 2,
+      "car_park": true,
+      "listing_type": "rent"
+    },
+    "results": [
+      {
+        "property_id": "db528ad0-02c9-4444-a960-36dfd00bc797",
+        "title": "Malaysia RM100 1st Prefix AA signed Zeti",
+        "price": null,
+        "price_buy": null,
+        "price_rent": null,
+        "listing_type": "rent",
+        "location": "Johor",
+        "state": "johor",
+        "bedrooms": null,
+        "bathrooms": null,
+        "image": "https://cdn.rnudah.com/grids/plain/b94946e0198f8dd808e27abbfdee7199-2838143463107532965.jpg",
+        "description": null,
+        "url": "https://www.mudah.my/malaysia-rm100-1st-prefix-aa-signed-zeti-103121458.htm",
+        "source": "live_search"
+      }
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "created_at": 1779672792.985892,
+  "data": {
+    "success": true,
+    "total_results": 2,
+    "filters_used": {
+      "location": "Johor",
+      "budget": 3500,
+      "bedrooms": 2,
+      "car_park": true,
+      "listing_type": "rent"
+    },
+    "results": [
+      {
+        "property_id": "93a98b05-ddc0-4f69-ab03-99d22bc260d0",
+        "title": "Kajang, Selangor",
+        "price": 385000.0,
+        "price_buy": null,
+        "price_rent": 385000.0,
+        "listing_type": "rent",
+        "location": "Johor",
+        "state": "Johor",
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "image": "https://cdn.rnudah.com/grids/plain/3249cb1e7a9df3306990156a26a73220-2983941086064450245.jpg",
+        "description": "NEW PROJECT FOR SALE❗❗❗\nMYRA PUTRI APARTMENT @ Desa Pinggiran Putra,  Kajang\n=======================\nBOOKING:RM250 SAHAJA\n✔ 2 parking lot (To be Confirm side by side or not)\n✔ Free SPA Fee, Loan Agreement Fee & MOT (for 1st house Buyer)\n✔ 2 Block, Block A & B\n✔ 2lift + 1 service lift per block in 1 lift lobby each Block\n✔ Low Density, 310 unit sahaja\n✔ Partially Furnish\n✔ Completion On Q1 2026\nPROPERTY DETAILS :\n# Type: Apartment\n# Build-Up Size : 904 Sqft\n# 3 BedRooms\n# 2 Bathrooms (1 in Master Bedroom)\n# Tenure: LEASEHOLD (Malay Reserved)\n# Price: BERMULA dari RM385K (10% rebate 1st house)\n# Maintenance Fee: RM0.25 / sqft\nFACILITIES :\n# Gated & 24 Hours Guarded\n# Management Office\n# Nursery\n# Shop/Kioks\n# Surau\n# Multipurpose hall /  Badminton Court\n# Playground\n# Basketball Court\nAMMENITIES :\n# SK Desa Pinggiran Putra, SM Abu Bakar Baginda, SM Presint 5\n# Surau Al-Mukhlisin, Surau Al-Ikhwan, Masjid Al-Hijrah\n# Commercial shoplot, 99speedmart, Klinik, Kedai Baiki Kereta & Motorsikal\n# Future Caltex Station, Petronas Presint 16\n# Alamanda Putrajaya, IOI City Mall Putrajaya\n# Akademi Bola Sepak, UiTM Dengkil\nEASY ACCESS:\n# To Dengkil, Sungai Merab, Salak Tinggi, Bangi (Sungai Merab route)\n# To Putrajaya, Cyberjaya\n# Mex Highway\n# ELite Highway\n# Kajang Silk\n# LDP Highway\n====================\n** Booking procedure:\n1. Booking Form\n2. IC photo\n3. Booking Fee (RM250)\n4. Book Unit\n5. Email detail(form), IC & Slip/Receipt\n6. Submit dokumen to Panel Banker / LPPSA\n7. After loan approved, sign SPA",
+        "url": "https://www.mudah.my/myra-putri-apartment-desa-pinggiran-putra-kajang-114132477.htm",
+        "source": "live_search"
+      },
+      {
+        "property_id": "a4d8190d-9082-4044-835e-7518c0bfe942",
+        "title": "Johor Bahru, Johor",
+        "price": 4500.0,
+        "price_buy": null,
+        "price_rent": 4500.0,
+        "listing_type": "rent",
+        "location": "Johor",
+        "state": "Johor",
+        "bedrooms": 6,
+        "bathrooms": 7,
+        "image": "https://cdn.rnudah.com/grids/plain/e6b289e1d59366dce6cd00faa19aac9d-2983794658125056024.jpg",
+        "description": "Rental 💥🎊\nDanga Sutera Club House\nSemi D house\n32×90\nSutera Mall 10 min\nTasek 15 min",
+        "url": "https://www.mudah.my/rent-danga-sutera-clubhouse-semi-d-114344281.htm",
+        "source": "live_search"
+      }
+    ]
+  }
+}

@@ -74,6 +74,7 @@ class PlaywrightClient:
             last_height = new_height
 
     async def get_html(self, url: str) -> str:
+
         async with self.semaphore:
 
             await asyncio.sleep(random.uniform(1.2, 2.5))
@@ -86,6 +87,21 @@ class PlaywrightClient:
                 await page.goto(url, wait_until="domcontentloaded", timeout=60000)
 
                 await page.wait_for_timeout(2500)
+
+                # SHOW MORE FIX
+                try:
+                    await page.evaluate("""
+                        const buttons = Array.from(document.querySelectorAll('button'));
+                        for (const b of buttons) {
+                            if (b.innerText && b.innerText.toLowerCase().includes('show more')) {
+                                b.click();
+                            }
+                        }
+                    """)
+                except:
+                    pass
+
+                await page.wait_for_timeout(1500)
 
                 await self.auto_scroll(page)
                 await page.wait_for_timeout(1000)

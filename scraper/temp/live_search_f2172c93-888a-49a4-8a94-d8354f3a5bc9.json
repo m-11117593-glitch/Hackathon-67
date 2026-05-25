@@ -1,0 +1,48 @@
+{
+  "created_at": 1779671546.865991,
+  "data": {
+    "success": true,
+    "total_results": 2,
+    "filters_used": {
+      "location": "johor",
+      "budget": 1500,
+      "bedrooms": 2,
+      "car_park": true,
+      "listing_type": "rent"
+    },
+    "results": [
+      {
+        "property_id": "ba9270a7-3d37-4007-987f-ba40a4b822a1",
+        "title": "Sungai Besi, Kuala Lumpur",
+        "price": 300000.0,
+        "price_buy": null,
+        "price_rent": 300000.0,
+        "listing_type": "rent",
+        "location": "Johor",
+        "state": "johor",
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "image": "https://cdn.rnudah.com/grids/plain/092ca5966b7cf01f5dd89338c494e34a-2921634260854816166.jpg",
+        "description": "🏙 Project Details\n♻ Leasehold\n♻ Rm300,000 Nett\n♻ 869Sqft\n♻ 3 Bedrooms 2 Bathrooms\n♻ Back of Selangor Turf Club\n♻ Developed Areas\n♻ Free 1 Car Park\n♻ Free SPA /Loan Legal Fee & SPA Disbursement\nFacilities\n🌀Swimming Pool, Kid’s Pool\n🌀Indoor Gym, Multi-Purpose Hall\n🌀Playground, Outdoor Gym\n🌀Multi-Purpose Court\n🌀Lakeside Jogging Path\n🗺 Project Location\nLocated at Lakefield SGBESI\n🛣 Easy accessible via Bukit Jalil Expressway, Suke Highway\n🚗 5mins The Trillium\n9mins The Mines\n11mins HUKM\n15mins Pavilion\nContact for visit sales gallery\nBrandon -",
+        "url": "https://www.mudah.my/residensi-tepian-tasik-lake-side-homes-114422006.htm",
+        "source": "live_search"
+      },
+      {
+        "property_id": "aa4902d4-4fe2-424b-a851-a95518588fe7",
+        "title": "Pandan Residence I @ Johor Bahru",
+        "price": null,
+        "price_buy": null,
+        "price_rent": null,
+        "listing_type": "rent",
+        "location": "Johor",
+        "state": "johor",
+        "bedrooms": 2,
+        "bathrooms": 2,
+        "image": "https://cdn.rnudah.com/image_property/plain/65107068b18fd48b50386669d19ce2f2-2844220477404855122.jpg",
+        "description": null,
+        "url": "https://www.mudah.my/property/properties-in-pandan-residence-i-johor-bahru-johor",
+        "source": "live_search"
+      }
+    ]
+  }
+}

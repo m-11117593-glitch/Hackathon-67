@@ -81,5 +81,6 @@ class BaseSource:
             html,
             url,
             self.name,
-            state
+            state,
+            listing_type
         )

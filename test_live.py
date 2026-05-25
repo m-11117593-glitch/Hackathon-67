@@ -59,34 +59,15 @@ async def run_test(name: str, filters: dict):
     except Exception as e:
         print(f"\n❌ TEST FAILED: {e}")
 
-
 async def main():
-
-    # ---------------------------------------------------
-    # SALE TEST
-    # ---------------------------------------------------
-    sale_filters = {
-        "location": "terengganu",
-        "budget": 300000,
-        "bedrooms": 1,
-        "car_park": True,
-        "listing_type": "sale"
-    }
-
-    # ---------------------------------------------------
     # RENT TEST
-    # ---------------------------------------------------
     rent_filters = {
-        "location": "johor",
-        "budget": 1500,
+        "location": "Johor",
+        "budget": 3500,
         "bedrooms": 2,
         "car_park": True,
         "listing_type": "rent"
     }
-
-    await run_test("SALE SEARCH", sale_filters)
-
-    await asyncio.sleep(3)
 
     await run_test("RENT SEARCH", rent_filters)
 

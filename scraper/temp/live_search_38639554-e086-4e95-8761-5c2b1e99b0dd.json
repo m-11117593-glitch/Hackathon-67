@@ -1,0 +1,32 @@
+{
+  "created_at": 1779672452.0859358,
+  "data": {
+    "success": true,
+    "total_results": 1,
+    "filters_used": {
+      "location": "johor",
+      "budget": 3500,
+      "bedrooms": 2,
+      "car_park": true,
+      "listing_type": "rent"
+    },
+    "results": [
+      {
+        "property_id": "f318ac9c-a9ee-4520-a2d6-2eb03582500a",
+        "title": "Johor Bahru, Johor",
+        "price": 4500.0,
+        "price_buy": null,
+        "price_rent": 4500.0,
+        "listing_type": "rent",
+        "location": "Johor",
+        "state": "johor",
+        "bedrooms": 6,
+        "bathrooms": 7,
+        "image": "https://cdn.rnudah.com/grids/plain/e6b289e1d59366dce6cd00faa19aac9d-2983794658125056024.jpg",
+        "description": "Rental 💥🎊\nDanga Sutera Club House\nSemi D house\n32×90\nSutera Mall 10 min\nTasek 15 min",
+        "url": "https://www.mudah.my/rent-danga-sutera-clubhouse-semi-d-114344281.htm",
+        "source": "live_search"
+      }
+    ]
+  }
+}
