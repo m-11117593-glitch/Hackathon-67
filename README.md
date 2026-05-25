@@ -1,250 +1,188 @@
-# 🏠 Mudah Property Scraper (Live + Batch Engine)
+🏠 Mudah Property Scraper (AI Dataset Builder)
 
-A high-performance **Playwright-based property scraping system** for Mudah.my that supports:
+A high-performance asynchronous web scraper that collects real estate listings from Mudah.my, designed to generate structured datasets for AI systems, recommendation engines, or LLM pipelines.
 
-- 🏡 Sale + Rent listings
-- ⚡ Live search mode (fast, capped at 50 results)
-- 📦 Batch scraping across Malaysian states
-- 🧠 Fallback query strategy (smart search variants)
-- 🖼️ Listing + full detail scraping (including description)
-- 💾 JSON caching for downstream ML / LLM usage
+It supports:
 
----
+🏡 Sale & Rent properties
+📍 State-by-state scraping (Malaysia)
+⚡ Concurrent Playwright scraping
+🧠 Clean JSON output for AI/LLM usage
+📦 Automatic caching + history tracking
+🔍 Top 50 listings per state (optimized for LLM ingestion)
+🚀 Features
+✔ Full property listing extraction (title, price, location, images, bedrooms, bathrooms)
+✔ Deep scraping of individual listing pages (full description included)
+✔ Smart filtering (removes invalid/bad listings)
+✔ Top 50 dataset cap (LLM-safe)
+✔ State-separated storage system
+✔ Rent + Sale classification
+✔ Automatic deduplication
+✔ Retry + concurrency control
+📦 Output Structure (IMPORTANT)
 
-# 🚀 Quick Start
+After running, data is stored like this:
 
-## 1. Install dependencies
+cache/
+  johor/
+    latest/
+      sale.json
+      rent.json
 
-```bash
-pip install playwright bs4 pandas
-playwright install
-2. Run LIVE search (recommended test)
-python test_live.py
-Example filters:
-filters = {
-    "location": "johor",
-    "budget": 300000,
-    "bedrooms": 2,
-    "car_park": True,
-    "listing_type": "rent"   # OR "sale"
-}
-3. Run FULL batch scraping (all states)
-python seed_all.py
+    history/
+      1712345678_sale.json
+      1712349999_rent.json
 
-This will:
+  selangor/
+    latest/
+      sale.json
+      rent.json
 
-Loop through all states in VALID_STATES
-Scrape listings per category
-Save JSON snapshots in /cache/history/
-⚙️ Core Features
-🏡 Listing Types
+    history/
+      ...
+🧠 What Each File Means
+📌 latest/
 
-Supported:
-
-"sale" → properties-for-sale
-"rent" → properties-for-rent
-
-Automatically affects:
-
-URL routing
-Price mapping (price_buy vs price_rent)
-JSON output structure
-📊 Output Format (IMPORTANT)
-
-Each property looks like:
-
-{
-  "property_id": "uuid",
-  "title": "Fully Furnished Condo",
-  "price": 1200,
-  "price_buy": null,
-  "price_rent": 1200,
-  "listing_type": "rent",
-  "location": "Johor Bahru",
-  "state": "johor",
-  "bedrooms": 2,
-  "bathrooms": 1,
-  "image": "https://...",
-  "description": "Full listing description text...",
-  "url": "https://www.mudah.my/...",
-  "source": "live_search"
-}
-🔍 How LIVE search works
-Function:
-live_property_search(filters)
-Flow:
-Generates fallback query variants
-Builds search URLs
-Scrapes listing pages
-Extracts property URLs
-Limits results to top 50
-Scrapes full property pages
-Extracts:
-Title
-Price
-Bedrooms / Bathrooms
-Images
-FULL DESCRIPTION (Playwright expanded)
-Saves JSON to /scraper/temp/
-🧠 Query System (IMPORTANT)
-
-File:
-
-scraper/utils/query_builder.py
-
-Responsible for:
-
-Price range filtering
-Bedroom filters
-Car park filtering
-Location normalization
+Always contains the most recent dataset per state + listing type
 
 Example:
 
-build_search_url({
-    "location": "johor",
-    "budget": 300000,
-    "bedrooms": 2,
-    "car_park": True
-})
-🔄 Fallback System
+cache/johor/latest/sale.json
 
-File:
+✔ Used for AI inference
+✔ Always overwritten (latest snapshot)
 
-scraper/live/search_fallback.py
+📌 history/
 
-It automatically generates:
+Stores all past snapshots (timestamped)
 
-Strict search
-Remove car park filter
-Remove bedroom filter
-Broad search (budget expanded)
+Example:
 
-This improves hit rate when listings are sparse.
+cache/johor/history/1712345678_sale.json
 
-⚡ Performance Rules
-Hard limits:
-Max results per live search: 50
-Max pages per variant: 2
-Concurrent scraping: 6 tasks
-Browser concurrency: controlled via semaphore
-🧱 Core Modules
-1. Playwright Client
+✔ Used for backup
+✔ Dataset versioning
+✔ Training / analytics
 
-File:
+⚙️ Main Function (Simple Integration)
+✅ One-line usage
+from scraper.engine import scrape_properties
+🚀 Example Call
+import asyncio
+from scraper.engine import scrape_properties
 
-scraper/browser/playwright_client.py
+async def main():
 
-Responsible for:
+    results = await scrape_properties({
+        "location": "johor",
+        "listing_type": "sale",   # or "rent"
+        "budget": 300000,
+        "bedrooms": 2,
+        "car_park": True
+    })
 
-Browser lifecycle
-Anti-bot delay
-Page scrolling
-"Show More" expansion
-HTML extraction
-2. Listing Parser
+    print("TOTAL:", len(results))
+    print(results[0])
 
-File:
+asyncio.run(main())
+🧩 Filter Options
+Field	Type	Description
+location	str	State in Malaysia (johor, selangor, etc.)
+listing_type	str	"sale" or "rent"
+budget	int	Target price range
+bedrooms	int	Number of bedrooms
+car_park	bool	Include car park filter
+🧠 How Pricing Works
 
-scraper/parsers/listing_parser.py
+The system automatically converts budget into a realistic range:
 
-Extracts:
+min_price = budget - 40%
+max_price = budget + 15%
 
-Valid property URLs only
-Filters ads, images, agents, spam links
-Deduplicates links
-3. Detail Parser
+Example:
 
-File:
+budget = 300000
 
-scraper/parsers/detail_parser.py
+min = 180000
+max = 345000
+🏗 Architecture Overview
+seed_all.py
+   ↓
+scrape_properties()
+   ↓
+PlaywrightClient (browser)
+   ↓
+ListingParser (extract URLs)
+   ↓
+DetailParser (extract full property data)
+   ↓
+Validation + Deduplication
+   ↓
+JSON Storage (state-based)
+⚡ Performance Design
+Async scraping (Playwright)
+Semaphore-controlled concurrency (safe crawling)
+Domain-aware request throttling
+Auto retry + timeout protection
+Top-50 cap for LLM optimization
+🧹 Data Cleaning Rules
 
-Extracts:
+✔ Invalid listings removed
+✔ Duplicate URLs removed
+✔ Price noise filtered
+✔ Broken links ignored
 
-Title
-Price
-Location
-Images
-Bedrooms / bathrooms
-FULL DESCRIPTION (important feature)
-4. Live Engine
+🧠 For AI / LLM Usage
 
-File:
+This scraper is optimized for:
 
-scraper/live/live_search.py
+🧾 RAG systems
+🏡 property recommendation models
+📊 dataset training
+🤖 agent-based real estate systems
 
-Main entry point:
+Each listing includes:
 
-await live_property_search(filters)
-5. Batch Engine
+{
+  "title": "...",
+  "price": 300000,
+  "price_buy": 300000,
+  "price_rent": null,
+  "location": "Johor Bahru",
+  "bedrooms": 3,
+  "bathrooms": 2,
+  "image": "...",
+  "url": "...",
+  "state": "johor"
+}
+🔥 Seed Full Dataset (ALL STATES)
+from scraper.seed_all import main
+import asyncio
 
-File:
+asyncio.run(main())
 
-scraper/engine.py
+This will:
 
-Used for:
-
-full state scraping
-cached dataset generation
-historical snapshots
-💾 Cache System
-Live search:
-scraper/temp/live_search_<uuid>.json
-Batch mode:
-cache/latest_sale.json
-cache/latest_rent.json
-cache/history/<timestamp>.json
-⚠️ Important Notes
-1. Description extraction
-Uses full listing page
-Automatically clicks "Show More"
-Removes UI buttons from text
-2. Listing type logic
-sale → price_buy
-rent → price_rent
-unified field: price
-3. Top 50 rule
-
-Hard enforced:
-
-unique_urls[:50]
-4. Anti-bot behavior
-Random user agent
-Random sleep delay
-Domain semaphores
-Scroll simulation
+loop all Malaysian states
+scrape sale + rent
+store structured datasets per state
 🧪 Testing
-Quick test
 python test_live.py
-Full system test
+
+or
+
 python seed_all.py
-🔥 Recommended Workflow
-Run test_live.py
-Validate JSON output
-Check description quality
-Run seed_all.py (single state first)
-Scale to all states
-🚀 System Status
-
-✔ Live search working
-✔ Rent + Sale supported
-✔ Description extraction fixed
-✔ Show-more automation added
-✔ Top-50 enforced
-✔ Fallback search engine active
-✔ JSON caching system stable
-
-🧠 Future Upgrade Ideas (optional)
-Ranking system (best deal scoring)
-AI summarizer for descriptions
-Duplicate spam filtering (agent detection)
-Vector DB for property search
-Frontend API wrapper (FastAPI)
-👨‍💻 End
-
-This system is now production-ready for:
-
-datasets
-AI agents
-property recommendation engines
-hackathon demos
+📌 Key Design Upgrade (IMPORTANT)
+Before:
+Overwriting single latest file ❌
+Mixed state data ❌
+Now:
+Fully isolated per state ✔
+Separate rent/sale datasets ✔
+Versioned history ✔
+LLM-ready structure ✔
+🚀 Future Expansion Ideas
+Vector search over listings (semantic matching)
+AI property recommendation agent
+FastAPI backend wrapper
+Real-time scraping API endpoint
