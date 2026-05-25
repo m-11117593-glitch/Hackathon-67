@@ -1,0 +1,34 @@
+{
+  "created_at": 1779665663,
+  "listing_type": "rent",
+  "state": "johor-johor-bahru",
+  "count": 2,
+  "data": [
+    {
+      "property_id": "85823d9d-8171-4886-98b3-acf6a3bd50a5",
+      "title": "Ipoh, Perak",
+      "price": 447000.0,
+      "listing_type": "rent",
+      "location": "Johor-johor-bahru",
+      "state": "johor-johor-bahru",
+      "bedrooms": 5,
+      "bathrooms": 3,
+      "image": "https://cdn.rnudah.com/grids/plain/f1d121445ffdd473f87690840143899e-2968923100306055716.jpg",
+      "url": "https://www.mudah.my/ipoh-bercham-olive-grove-new-double-storey-house-for-sale-112867498.htm",
+      "source": "rent"
+    },
+    {
+      "property_id": "f93cf408-8ed3-41c0-8f5b-9affd15958aa",
+      "title": "Pedas, Negeri Sembilan",
+      "price": 600.0,
+      "listing_type": "rent",
+      "location": "Johor-johor-bahru",
+      "state": "johor-johor-bahru",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "image": "https://cdn.rnudah.com/grids/plain/beb34eec08f6c6ad699c347f437fe937-2985379509110762512.jpg",
+      "url": "https://www.mudah.my/rumah-sewa-di-pedas-chembong-rembau-114268671.htm",
+      "source": "rent"
+    }
+  ]
+}

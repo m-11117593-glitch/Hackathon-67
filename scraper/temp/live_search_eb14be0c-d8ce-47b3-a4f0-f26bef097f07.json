@@ -1,0 +1,24 @@
+{
+  "created_at": 1779614317.2137504,
+  "data": {
+    "success": true,
+    "query_url": "https://www.mudah.my/johor/properties-for-sale?price=300000-575000&q=3+bedrooms%2Ccar+park",
+    "total_results": 1,
+    "results": [
+      {
+        "property_id": "00417954-fdf3-4753-808f-942412962f4b",
+        "title": null,
+        "price": 850.0,
+        "price_buy": 850.0,
+        "price_rent": 560.0,
+        "location": "Johor",
+        "state": "johor",
+        "bedrooms": null,
+        "bathrooms": null,
+        "image": "https://cdn.rnudah.com/image_property/plain/e948e7c1d1784d55a49e47d1b0ec6e28-2852145763881663140.jpg",
+        "url": "https://www.mudah.my/property/apartment",
+        "source": "mudah_live"
+      }
+    ]
+  }
+}

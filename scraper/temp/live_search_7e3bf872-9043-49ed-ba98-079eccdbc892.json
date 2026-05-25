@@ -1,0 +1,38 @@
+{
+  "created_at": 1779614892.0532231,
+  "data": {
+    "success": true,
+    "query_url": "https://www.mudah.my/johor/properties-for-sale?price=300000-575000&q=3+bedrooms%2Ccar+park",
+    "total_results": 2,
+    "results": [
+      {
+        "property_id": "fb783440-e7d6-43fa-8b96-82a49bcb497a",
+        "title": "Palazio,Johor Bahru, Johor",
+        "price": 460000.0,
+        "price_buy": 460000.0,
+        "price_rent": 415000.0,
+        "location": "Johor",
+        "state": "johor",
+        "bedrooms": 2,
+        "bathrooms": 2,
+        "image": "https://cdn.rnudah.com/images/plain/3515b21dc8fae77193af0e7af8e722c9-2956258627815147356.jpg",
+        "url": "https://www.mudah.my/palazio-mount-austin-3-bedrooms-renovated-2-car-park-view-n-offer-113055745.htm",
+        "source": "mudah_live"
+      },
+      {
+        "property_id": "213dbba7-3356-4e8e-8aa9-08d725a263d8",
+        "title": "Fawina Court",
+        "price": 71245.0,
+        "price_buy": 71245.0,
+        "price_rent": null,
+        "location": "Johor",
+        "state": "johor",
+        "bedrooms": 2,
+        "bathrooms": 2,
+        "image": "https://img.rnudah.com/grids/29/2983788281702161093.jpg",
+        "url": "https://www.mudah.my/property/properties-in-fawina-court-kuala-lumpur",
+        "source": "mudah_live"
+      }
+    ]
+  }
+}

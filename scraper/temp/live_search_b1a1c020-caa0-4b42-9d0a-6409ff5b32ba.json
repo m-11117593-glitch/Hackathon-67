@@ -1,0 +1,29 @@
+{
+  "created_at": 1779666493.0456676,
+  "data": {
+    "success": true,
+    "total_results": 1,
+    "filters_used": {
+      "location": "johor",
+      "budget": 1500,
+      "bedrooms": 2,
+      "car_park": true,
+      "listing_type": "rent"
+    },
+    "results": [
+      {
+        "property_id": "d8013958-b544-47dc-8a7c-4e78361710d6",
+        "title": "Pangsapuri Villa Harmonis",
+        "price": null,
+        "listing_type": "rent",
+        "location": "Johor",
+        "state": "johor",
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "image": "https://cdn.rnudah.com/image_property/plain/86d6944096f8c6718d090e59dfb25900-2908247139316392243.jpg",
+        "url": "https://www.mudah.my/property/properties-in-pangsapuri-villa-harmonis-selangor",
+        "source": "live_search"
+      }
+    ]
+  }
+}

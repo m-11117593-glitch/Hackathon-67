@@ -49,13 +49,29 @@ class ListingValidator:
 
 
     @staticmethod
-    def is_valid_price(price: Any) -> bool:
+    def is_valid_price(
+        price: Any,
+        listing_type: str = "sale"
+    ) -> bool:
+
         if price is None:
-            return True  # allow missing price but not blocking
+            return True
 
         try:
+
             price = float(price)
-            return price > 10000  # filter obvious junk prices (ads, weird entries)
+
+            # ---------------- RENT ----------------
+            if listing_type == "rent":
+
+                return (
+                    price > 100
+                    and price < 30000
+                )
+
+            # ---------------- SALE ----------------
+            return price > 10000
+
         except:
             return False
 

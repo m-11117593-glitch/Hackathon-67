@@ -1,0 +1,66 @@
+{
+  "created_at": 1779614186.4541624,
+  "data": {
+    "success": true,
+    "query_url": "https://www.mudah.my/johor/properties-for-sale?price=300000-575000&q=3+bedrooms%2Ccar+park",
+    "total_results": 4,
+    "results": [
+      {
+        "property_id": "44c0ddfa-abfd-48ea-94a9-c51a5c9f87d9",
+        "title": "404",
+        "price": null,
+        "price_buy": null,
+        "price_rent": null,
+        "location": "Johor",
+        "state": "johor",
+        "bedrooms": null,
+        "bathrooms": null,
+        "image": "https://www.facebook.com/tr?id=632307416906311&ev=viewcategory&&cd[content_category]=0%20%7c%20all_categories&noscript=1",
+        "url": "https://www.mudah.my/property/apartment%3Futm_source%3Ddfp%26utm_medium%3Dbanner%26utm_campaign%3Dall_cat_oct2023%26utm_term%3Dapartment-directory-building-page%26utm_content%3Dhalfpage</a>",
+        "source": "mudah_live"
+      },
+      {
+        "property_id": "17294cd9-2f77-4cf8-9ae3-93d433488284",
+        "title": "404",
+        "price": null,
+        "price_buy": null,
+        "price_rent": null,
+        "location": "Johor",
+        "state": "johor",
+        "bedrooms": null,
+        "bathrooms": null,
+        "image": "https://www.facebook.com/tr?id=632307416906311&ev=viewcategory&&cd[content_category]=0%20%7c%20all_categories&noscript=1",
+        "url": "https://www.mudah.my/property/apartment</a><a",
+        "source": "mudah_live"
+      },
+      {
+        "property_id": "13a7d43d-bfce-401c-b907-ced8a5bd9ca0",
+        "title": null,
+        "price": 850.0,
+        "price_buy": 850.0,
+        "price_rent": 560.0,
+        "location": "Johor",
+        "state": "johor",
+        "bedrooms": null,
+        "bathrooms": null,
+        "image": "https://cdn.rnudah.com/image_property/plain/e948e7c1d1784d55a49e47d1b0ec6e28-2852145763881663140.jpg",
+        "url": "https://www.mudah.my/property/apartment",
+        "source": "mudah_live"
+      },
+      {
+        "property_id": "850e3b11-e346-4f65-b96a-1c2afe73c6b2",
+        "title": "404",
+        "price": null,
+        "price_buy": null,
+        "price_rent": null,
+        "location": "Johor",
+        "state": "johor",
+        "bedrooms": null,
+        "bathrooms": null,
+        "image": "https://www.facebook.com/tr?id=632307416906311&ev=viewcategory&&cd[content_category]=0%20%7c%20all_categories&noscript=1",
+        "url": "https://www.mudah.my/property/apartment%3Futm_source%3Ddfp%26utm_medium%3Dbanner%26utm_campaign%3Dall_cat_oct2023%26utm_term%3Dapartment-directory-building-page%26utm_content%3Dhalfpage",
+        "source": "mudah_live"
+      }
+    ]
+  }
+}

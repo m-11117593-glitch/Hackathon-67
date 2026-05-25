@@ -3,11 +3,22 @@ from urllib.parse import quote_plus
 from scraper.utils.location_normalizer import normalize_location
 
 
-def calculate_price_range(budget: int):
+def calculate_price_range(
+    budget: int,
+    listing_type: str = "sale"
+):
 
-    min_price = int(budget - (budget * 0.40))
+    # ---------------- RENT ----------------
+    if listing_type == "rent":
 
-    max_price = int(budget + (budget * 0.15))
+        min_price = int(budget - (budget * 0.40))
+        max_price = int(budget + (budget * 0.20))
+
+    # ---------------- SALE ----------------
+    else:
+
+        min_price = int(budget - (budget * 0.40))
+        max_price = int(budget + (budget * 0.15))
 
     if min_price < 0:
         min_price = 0
@@ -15,39 +26,66 @@ def calculate_price_range(budget: int):
     return min_price, max_price
 
 
-def build_search_url(filters: dict) -> str:
+def build_search_url(
+    filters: dict,
+    page: int = 1
+) -> str:
 
     location = filters.get("location", "malaysia")
+
+    listing_type = filters.get(
+        "listing_type",
+        "sale"
+    )
 
     budget = filters.get("budget")
 
     bedrooms = filters.get("bedrooms")
 
-    car_park = filters.get("car_park", False)
+    car_park = filters.get(
+        "car_park",
+        False
+    )
 
     normalized_location = normalize_location(location)
 
-    base_url = f"https://www.mudah.my/{normalized_location}/properties-for-sale"
+    # ---------------- SALE / RENT ----------------
+    if listing_type == "rent":
+        base_url = (
+            f"https://www.mudah.my/"
+            f"{normalized_location}/properties-for-rent"
+        )
+    else:
+        base_url = (
+            f"https://www.mudah.my/"
+            f"{normalized_location}/properties-for-sale"
+        )
 
     params = []
+
+    # ---------------- PAGE ----------------
+    params.append(f"o={page}")
 
     # ---------------- PRICE ----------------
     if budget:
 
-        min_price, max_price = calculate_price_range(budget)
+        min_price, max_price = calculate_price_range(
+            budget,
+            listing_type
+        )
 
         params.append(
             f"price={min_price}-{max_price}"
         )
 
-    # ---------------- SEARCH QUERY ----------------
+    # ---------------- QUERY ----------------
     q_parts = []
 
     if bedrooms:
-        q_parts.append(f"{bedrooms} bedrooms")
+        q_parts.append(f"{bedrooms} bedroom")
 
     if car_park:
-        q_parts.append("car park")
+        q_parts.append("carpark")
 
     if q_parts:
 
@@ -57,8 +95,4 @@ def build_search_url(filters: dict) -> str:
             f"q={quote_plus(q)}"
         )
 
-    # ---------------- FINAL URL ----------------
-    if params:
-        return base_url + "?" + "&".join(params)
-
-    return base_url
+    return base_url + "?" + "&".join(params)

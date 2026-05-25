@@ -60,10 +60,11 @@ async def scrape_property_detail(
             return None
 
         data = DetailParser.extract_data(
-            html=html,
-            url=url,
-            source="mudah_live",
-            state=filters.get("location", "malaysia")
+            html,
+            url,
+            "live_search",
+            filters["location"],
+            filters.get("listing_type", "sale")
         )
 
         return data
