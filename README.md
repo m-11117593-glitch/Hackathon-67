@@ -206,3 +206,331 @@ No proxy rotation
 Some anti-bot pages fail silently
 Some images/prices require JS rendering delay
 Some listings are partially blocked
+Hackathon Claude3 — Malaysian Property Scraper
+
+AI-ready Malaysian property scraping engine for:
+
+Property sales
+Property rentals
+Live filtered searches
+Cached nationwide scraping
+Mudah.my integration
+Async Playwright scraping
+
+Built with:
+
+Python
+Playwright
+AsyncIO
+BeautifulSoup
+Features
+✅ Live Search Engine
+
+Supports dynamic filters:
+
+filters = {
+    "location": "terengganu",
+    "budget": 300000,
+    "bedrooms": 2,
+    "car_park": True,
+    "listing_type": "sale"  # or "rent"
+}
+
+Supports:
+
+sale listings
+rent listings
+budget filtering
+bedrooms filtering
+car park filtering
+✅ Nationwide Scraper
+
+Scrapes all Malaysian states and stores:
+
+latest snapshots
+historical snapshots
+cached JSON results
+✅ Intelligent Price Parsing
+
+Automatically detects:
+
+sale prices
+rental prices
+
+Rental keywords:
+
+/month
+monthly
+sewa
+rental
+
+Logic:
+
+rent listing → price_rent
+sale listing → price_buy
+
+Unified field:
+
+"price": 2500
+✅ Deduplication
+
+Removes:
+
+duplicate URLs
+ghost listings
+repeated entries
+✅ Validation Layer
+
+Filters out:
+
+broken listings
+junk prices
+invalid URLs
+malformed titles
+Project Structure
+scraper/
+│
+├── browser/
+│   └── playwright_client.py
+│
+├── live/
+│   └── live_search.py
+│
+├── parsers/
+│   ├── detail_parser.py
+│   └── listing_parser.py
+│
+├── utils/
+│   ├── query_builder.py
+│   ├── listing_validator.py
+│   ├── price_cleaner.py
+│   └── location_normalizer.py
+│
+├── engine.py
+├── config.py
+│
+cache/
+│
+├── history/
+├── latest_sale.json
+├── latest_rent.json
+└── index.json
+Installation
+1. Install Python packages
+pip install -r requirements.txt
+2. Install Playwright browsers
+python -m playwright install
+How To Use
+1. Live Property Search
+
+Run:
+
+python test_live.py
+
+Example:
+
+filters = {
+    "location": "johor",
+    "budget": 2500,
+    "bedrooms": 2,
+    "car_park": True,
+    "listing_type": "rent"
+}
+
+Returns:
+
+JSON output
+live scraped listings
+filtered results
+2. Scrape Entire Malaysia
+
+Run:
+
+python seed_all.py
+
+This:
+
+scrapes all states
+saves JSON cache
+updates latest snapshots
+Important Architecture Notes
+❗ Query Builder Is Now The Main Engine
+
+Old:
+
+mudah_config.py
+
+New:
+
+query_builder.py
+
+The scraper now dynamically builds:
+
+sale URLs
+rental URLs
+filter queries
+pagination
+URL Logic
+
+Sale:
+
+https://www.mudah.my/johor/properties-for-sale
+
+Rent:
+
+https://www.mudah.my/johor/properties-for-rent
+
+Query Example:
+
+?q=2+bedrooms,car+park
+Cache System
+
+Generated files:
+
+cache/latest_sale.json
+cache/latest_rent.json
+cache/history/
+
+Old cache auto-cleans after:
+
+3 days
+Important Files
+test_live.py
+
+Testing live property search.
+
+seed_all.py
+
+Nationwide scraper.
+
+scraper/live/live_search.py
+
+Main live search engine.
+
+scraper/parsers/detail_parser.py
+
+Extracts:
+
+title
+price
+rent/sale detection
+bedrooms
+bathrooms
+images
+scraper/utils/query_builder.py
+
+Builds dynamic Mudah URLs.
+
+Common Problems
+❌ await outside function
+
+Wrong:
+
+await something()
+
+Correct:
+
+asyncio.run(main())
+❌ Playwright import errors
+
+Install:
+
+python -m playwright install
+❌ Browser hangs forever
+
+Cause:
+
+wait_until="networkidle"
+
+Fixed with:
+
+wait_until="domcontentloaded"
+Performance Notes
+
+Current system:
+
+async scraping
+semaphore throttling
+parallel detail scraping
+timeout-safe fetching
+
+Optimized for:
+
+stability
+anti-freeze
+low RAM usage
+Checklist For Integration
+REQUIRED
+1. Install dependencies
+pip install -r requirements.txt
+python -m playwright install
+2. Verify imports work
+python -c "from scraper.browser.playwright_client import PlaywrightClient; print('OK')"
+3. Test live scraper
+python test_live.py
+4. Test nationwide scraper
+python seed_all.py
+Things To Watch Out For
+⚠ Mudah Rate Limits
+
+Too much concurrency may:
+
+timeout
+soft block
+slow responses
+
+Current safe concurrency:
+
+Semaphore(6)
+⚠ Rental Detection
+
+Rental detection currently uses:
+
+keywords
+price thresholds
+
+Future improvement:
+
+ML classification
+metadata extraction
+⚠ Cache Size
+
+History grows over time.
+
+Auto cleanup:
+
+3 day TTL
+Future Improvements
+
+Potential upgrades:
+
+recommendation engine
+FastAPI backend
+vector search
+embeddings
+AI ranking
+PostgreSQL storage
+Redis caching
+proxy rotation
+CAPTCHA solving
+image similarity search
+Quick Start
+git clone <repo>
+
+cd Hackathon-claude3
+
+pip install -r requirements.txt
+
+python -m playwright install
+
+python test_live.py
+Example Output
+{
+  "title": "Apartment Austin Heights",
+  "price": 2500,
+  "price_rent": 2500,
+  "listing_type": "rent",
+  "bedrooms": 2,
+  "bathrooms": 2,
+  "location": "Johor Bahru"
+}
